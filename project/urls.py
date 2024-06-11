@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from shop.views import CategoryViewset, ProductViewset
+from shop.views import CategoryViewset, ProductViewset, ArticleViewset
 from rest_framework import routers
 
 from shop.views import CategoryViewset
@@ -8,6 +8,7 @@ from shop.views import CategoryViewset
 router = routers.SimpleRouter()
 router.register('category', CategoryViewset, basename='category')
 router.register('product', ProductViewset, basename='product')
+router.register('article', ArticleViewset, basename='article')
 
 
 urlpatterns = [
